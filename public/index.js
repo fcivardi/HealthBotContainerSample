@@ -75,7 +75,7 @@ function initBotConversation() {
                                 value: {
                                     trigger: "coronavirus_it"
                                 },
-                                from: "user", 
+                                from: user, 
                                 name: "CoronaVirus_Italian"}).subscribe(function (id) {});
     botConnection.activity$
         .filter(function (activity) {return activity.type === "event" && activity.name === "shareLocation"})
