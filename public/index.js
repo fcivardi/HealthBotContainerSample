@@ -71,6 +71,7 @@ function initBotConversation() {
         webSocket: true
     });
     startChat(user, botConnection);
+    botConnection.postActivity({type: "event", value: jsonWebToken, from: user, name: "InitAuthenticatedConversation"}).subscribe(function (id) {});
     botConnection.postActivity({type: "event", 
                                 value: {
                                     trigger: "coronavirus_it"
